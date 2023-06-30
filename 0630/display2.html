@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //회사 이름을 배열로 생성
+        let companys=["LG EDS","adamsoft","naver"]
+        //두번째 데이터를 수정
+        companys[1]="아담소프트"
+        console.log(companys)
+        //데이터 개수 확인
+        console.log(companys.length)
+
+        console.log("12"+"34")
+        console.log(Number("12")+Number("34"))
+        let index=0
+        setInterval(function(){
+            index=index+1
+            if(index%3==0){
+                document.write("빨강"+"<br/>")
+            }
+            if (index%3==1){
+                document.write("파랑"+"<br/>")
+            }
+            if (index%3==2){
+                document.write("노랑"+"<br/>")
+            }
+        },1000)
+    </script>
+</body>
+</html>
