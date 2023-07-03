@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function zergattack(){
+            document.write("저그의 공격"+"<br/>");
+        }
+        function protossattack(){
+            document.write("프로토스의 공격"+"<br/>");
+        }
+        //zergattack()
+        //protossattack()
+
+        let starcraft;
+        starcraft=zergattack;
+        //함수의 내용을 다른 변수에 담아서 호출하는 것을 DELEGATE라고 합니다
+        starcraft()
+        starcraft=protossattack;
+        //동일한 코드가 대입된 내용에 따라 다른 함수를 호출
+        starcraft()
+
+        function outer(){
+            let data=0; //함수 안에서 만든 변수라서 함수 안에서만 사용 가능
+            //함수가 함수를 리턴
+            //함수 리턴해서 내부 데이터를 외부에서 변경하는 걸 closure
+            return function(){
+                data=data+1;
+                console.log(data)
+            }
+        }
+        //outer함수를 호출하고 그 결과를 inner에 저장
+        //outer 함수가 리턴하는 함수를 inner에 저장
+        let inner=outer();
+        inner()
+        inner()
+        //익명함수:필요할 때 만들어서 사용
+        const arrow=()=>{
+            alert("이름없는 화살표 함수")
+        }
+        arrow();
+    </script>
+</body>
+</html>

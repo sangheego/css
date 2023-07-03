@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*let score = 90
+        //score가 60이상이면 합격이라고 콘솔에 출력
+        //()는 하나의 블럭
+        if (score>=60){
+            console.log("합격")
+            //let을 붙이면 지역변수로 생성이 됩니다.
+            //블럭 외부에서는 사용할 수 없습니다.
+            //let name="adam"
+        }
+        console.log(name);
+        
+
+        let score=50;
+        if (score>=60){
+            console.log("합격");
+        }else{
+            console.log("불합격")
+        }
+
+        
+        let msg;
+        if (score>=60){
+            msg="합격";
+        }else{
+            msg="불합격"
+        }
+        console.log(msg)
+        */
+        //코딩 테스트 문제를 풀 때는 범위를 정확히 확인해야 합니다. 
+        let score=101;
+        //80-100:우수
+        //60-79: 보통
+        //0-59: 저조
+        //그 이외: 잘못된 점수
+        if(score>=80 && score<=100){
+            console.log("우수");
+        }else if(score>=60 && score <80){
+            console.log("보통");
+        }else if(score<60 && score>=0){
+            console.log("저조");
+        }else{
+            console.log("잘못된 점수");
+        }
+
+        let year= 2023;
+        //윤년은 아래 두 조건 중 하나만 만족하면 됩니다
+        //4의 배수이고 100의 배수는 아닌 경우
+        //400의 배수인 경우
+        if(year%4 ==0 && year%100 !=0 || year%400==0){
+            console.log(year+"년은 윤년");
+        }else{
+            console.log(year+"년은 윤년이 아님")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

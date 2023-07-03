@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //첫 번째와 세 번째 식에 여러 개의 문장 사용 가능
+        //단 이경우에는 ,로 구분
+        for(let idx=0, i=0; idx<5; idx=idx+1,i=i+2){
+            console.log(idx+i);
+        }
+        
+        let ar=["a","b","c"]
+        for (idx in ar){
+            console.log(idx);//0,1,2
+            console.log(ar[idx]);
+        }
+
+        for (let i=1; i<5; i=i+1){
+            if(i%2==0){
+                //break; 반복문 중단
+                continue; //아래 문장을 수행하지 않고 다음 반복으로 넘어감
+            }
+            document.write(i);
+        }
+    </script>
+</body>
+</html>
