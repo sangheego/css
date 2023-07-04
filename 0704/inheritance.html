@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Super=class{
+            method(){
+                console.log("상위 클래스의 메서드");
+            }
+        }
+        //super로부터 상속받는 sub클래스
+        class Sub extends Super{
+            method(){
+                super.method();
+                console.log("하위 클래스의 메서드");
+            }
+
+        }
+        let obj=new Sub();
+        //원래 sub에는 method가 없지만 상속 받아서 호출 가능
+        obj.method();
+        //모두 대문자로 변경하고 좌우 공백 제거
+        let company="kakao";
+        let result = company.toUpperCase().trim(); //trim과 toUpperCase 순서 상관 없음 but trim 먼저가 나음
+        console.log(result)
+
+        console.log(company.indexOf("ao"))
+
+        //아래 파일 명에서 확장자를 추출 - hwp 뽑아내기
+        let filename="kaka.hwp";
+        console.log(filename.split(".").pop())
+        //. 단위로 분할해서 마지막 요소를 출력
+        let ar=filename.split(".");
+        console.log(ar[ar.length-1])
+        //.의 위치를 찾고 . 다음 부분을 추출
+        let index=filename.indexOf(".");
+        console.log(filename.substring(5));
+
+        //CGGC의 모든 위치를 출력하시오
+        //중첩되는 경우는 앞의 문자열 한 번만 적용
+        let origin="ABCDECGGCDKEDCGGCGGGCDDDD";
+
+    </script>
+</body>
+</html>
